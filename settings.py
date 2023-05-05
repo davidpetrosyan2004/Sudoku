@@ -1,0 +1,42 @@
+import math
+from puzzle import Puzzle
+
+# game settings
+WIDTH = 1200
+HEIGHT = 700
+HALF_WIDTH = WIDTH // 2
+HALF_HEIGHT = HEIGHT // 2
+FPS = 60
+
+# cell
+CELL_WIDTH = 50
+CELL_HEIGHT = 50
+CELL_WIDTH1 = 20
+CELL_HEIGHT1 = 20
+
+# board
+SOLVED_BOARD = Puzzle.generate_solved_puzzle()
+BOARD = Puzzle.generate_unsolved_puzzle(SOLVED_BOARD)
+LEN_BOARD = len(BOARD)
+ROOT_BOARD = int(math.sqrt(LEN_BOARD))
+BOARD_WIDTH = len(BOARD)*CELL_WIDTH
+BOARD_HEIGHT = len(BOARD)*CELL_HEIGHT
+BOARD_TOPLEFT_X = int((WIDTH-BOARD_WIDTH)//2)
+BOARD_TOPLEFT_Y = int((HEIGHT-BOARD_HEIGHT)//2)
+BOARD1_TOPLEFT_Y = 0
+BOARD1_TOPLEFT_X = 0
+BOLD = 3
+
+# colours
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (220, 0, 0)
+GREEN = (0, 220, 0)
+BLUE = (0, 0, 255)
+DARKGRAY = (40, 40, 40)
+PURPLE = (120, 0, 120)
+SKYBLUE = (0, 186, 255)
+YELLOW = (220, 220, 0)
+CERULEAN = (204, 204, 255)
+POWDERBLUE = (164, 221, 237)
+PINK = (255,182,193)
